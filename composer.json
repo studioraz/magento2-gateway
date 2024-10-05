@@ -3,7 +3,7 @@
     "description" : "Magento 2 module to provide general Gateway functionality for external Services based on REST/SOAP API.",
     "type" : "magento2-module",
     "prefer-stable": true,
-    "version": "2.2.0",
+    "version": "2.3.0",
     "license": [
         "proprietary"
     ],
