@@ -63,8 +63,9 @@ class Guzzle extends Client implements ClientInterface
             $log['response'] = __($e->getMessage());
             throw new ClientException(__($e->getMessage()));
         } finally {
-            $response['last_request'] = $transferObject->getBody();
-            $log['response']  = $response['last_response'] = isset($httpResponse) ? $httpResponse->getBody() : '';
+            $response['last_request']   = $transferObject->getBody();
+            $log['response']            = $response['last_response'] = isset($httpResponse) ? $httpResponse->getBody() : '';
+            $log['response_object']     = $response['object'];
             $this->logger->debug($log);
         }
 
