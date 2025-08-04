@@ -44,7 +44,7 @@ class DbHandler extends AbstractProcessingHandler
     /**
      * @inheritDoc
      */
-    public function isHandling(array $record): bool
+    public function isHandling($record): bool
     {
         // NOTE: check if the Module is active
         if (!$this->config->getValue(Config::KEY_CONFIG_ACTIVE, Config::GROUP_PATH_GENERAL)) {
@@ -68,7 +68,7 @@ class DbHandler extends AbstractProcessingHandler
     /**
      * @inheritDoc
      */
-    protected function write(array $record): void
+    protected function write($record): void
     {
         // TODO: Implement write() method.
         //     just example was added (how it can be used)

@@ -37,7 +37,7 @@ class FileHandler extends LoggerDebugHandler
     /**
      * @inheritDoc
      */
-    public function isHandling(array $record): bool
+    public function isHandling($record): bool
     {
         // NOTE: check the Module is active
         if (!$this->config->getValue(Config::KEY_CONFIG_ACTIVE, Config::GROUP_PATH_GENERAL)) {
