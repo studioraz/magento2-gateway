@@ -53,10 +53,10 @@ class GatewayCommand implements CommandInterface
         TransferFactoryInterface $transferFactory,
         ClientFactoryInterface $clientFactory,
         LoggerInterface $logger,
-        HandlerInterface $handler = null,
-        ValidatorInterface $validator = null,
-        ErrorMessageMapperInterface $errorMessageMapper = null,
-        DataModifierInterface $dataModifier = null
+        ?HandlerInterface $handler = null,
+        ?ValidatorInterface $validator = null,
+        ?ErrorMessageMapperInterface $errorMessageMapper = null,
+        ?DataModifierInterface $dataModifier = null
     ) {
         $this->requestBuilder    = $requestBuilder;
         $this->transferFactory   = $transferFactory;

@@ -18,7 +18,7 @@ class ModuleState implements ModuleStateInterface
      * @param ConfigInterface $config
      * @param bool|null $forceActive
      */
-    public function __construct(ConfigInterface $config, bool $forceActive = null)
+    public function __construct(ConfigInterface $config, ?bool $forceActive = null)
     {
         $this->config = $config;
         $this->forceActive = $forceActive;

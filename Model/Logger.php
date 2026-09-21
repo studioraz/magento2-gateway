@@ -25,7 +25,7 @@ class Logger implements LoggerInterface
      */
     public function __construct(
         PsrLoggerInterface $logger,
-        ConfigInterface $config = null
+        ?ConfigInterface $config = null
     ) {
         $this->logger = $logger;
         $this->config = $config;
@@ -34,7 +34,7 @@ class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
-    public function debug($data, array $maskKeys = null, ?bool $forceDebug = null): void
+    public function debug($data, ?array $maskKeys = null, ?bool $forceDebug = null): void
     {
         $debugOn = $forceDebug !== null ? $forceDebug : $this->isDebugOn();
         $isUsedForDbLog = (bool)(is_array($data) ? ($data[DbHandler::DB_LOG_HANDLER_FLAG] ?? null) : null);

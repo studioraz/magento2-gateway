@@ -35,7 +35,7 @@ class Guzzle extends Client implements ClientInterface
     public function __construct(
         LoggerInterface $logger,
         GuzzleClientFactory $clientFactory,
-        ConverterInterface $converter = null
+        ?ConverterInterface $converter = null
     ) {
         $this->logger           = $logger;
         $this->clientFactory    = $clientFactory;
