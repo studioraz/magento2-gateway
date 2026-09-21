@@ -30,7 +30,7 @@ class Rest implements ClientInterface
     public function __construct(
         LoggerInterface $logger,
         ClientAdapterFactory $clientAdapterFactory,
-        ConverterInterface $converter = null
+        ?ConverterInterface $converter = null
     ) {
         $this->logger = $logger;
         $this->clientAdapterFactory = $clientAdapterFactory;

@@ -23,7 +23,7 @@ interface LoggerInterface
      *
      * @return void
      */
-    public function debug($data, array $maskKeys = null, ?bool $forceDebug = null): void;
+    public function debug($data, ?array $maskKeys = null, ?bool $forceDebug = null): void;
 
     /**
      * Critical conditions.
